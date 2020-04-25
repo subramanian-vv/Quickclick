@@ -1,0 +1,47 @@
+td.number {
+    border: 2px solid #000;
+    padding: 0.5rem;
+    background-color: aqua;
+    font-weight: bolder;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+td.number:hover{
+    background-color: #f5f5f5;
+}
+table{
+    width: fit-content;
+    table-layout: initial;
+}
+.timer {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 20px;
+    color: blue;
+    width: 200px;
+}
+#b {
+    text-align: center;
+    color: green;
+    font-size: 30px;
+    font-weight: bolder;    
+}
+#change1 {
+    font-size: 30px;
+    color: crimson;
+}
+#change {
+    font-size: 30px;
+    color: crimson;
+}
+#restart {
+    font-size: 30px;
+    color: green;
+    font-weight: bolder;
+    position: absolute;
+    left: 580px;
+    top: 350px
+}
