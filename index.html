@@ -4,58 +4,68 @@
     <title> Forty Shades of Gray </title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body align="center">
+
+<body align="center" bgcolor="black">
+    
+    <h3> ENJOY GENTLE MUSIC BY CLICKING ON THE PLAY BUTTON! 
+        <br> Use headphones for a better experience! </h3>
+    
+    <audio controls>
+        <source src = "waterfall.mp3" type="audio/mpeg">
+    </audio>
+    
     <h1> Click the numbers as quickly as you can! </h1>
 
     <button id="b" onclick="start()"> START GAME </button>
 
-    
     <p></p>
-<table align="center">
+    <table align="center">
         <tr>
-  
-    <td class="timer" align="center"> TIME 
-    <br> <div id="change"> 0:00:00 </div> 
+        <td class="timer" align="center"> TIME 
+        <br> <div id="change"> 0:00:00 </div> 
+    
     <script type="text/javascript" src="timer.js"></script></td>
 
-    <td class="timer" align="center"> BEST TIME 
-    <br> <div id="change1"> 0:00:00 </div>  </td> </tr>
+        <td class="timer" align="center"> BEST TIME 
+        <br> <div id="change1"> 0:00:00 </div>  </td> </tr>
 
-</table>
-<p><table id="main" style="visibility: hidden" align="center">
+    </table>
+
+    <p><table id="main" style="visibility: hidden" align="center">
     
-
-    <tr>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-    </tr>
-    <tr>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-    </tr>
-    <tr>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-    </tr>
-    <tr>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
-        <td class = "number"> </td>
+        <tr>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+        </tr>
+        <tr>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+        </tr>
+        <tr>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+        </tr>
+        <tr>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
+            <td class = "number"> </td>
         
-    </tr>
-</table></p>
+        </tr>
+    </table></p>
+
 <button id="restart" style="visibility: hidden" onclick="restart()"> RESTART </button>
+
 <script type="text/javascript" src="index.js"></script>
 
 </body>

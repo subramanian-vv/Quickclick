@@ -3,6 +3,7 @@ var arr=document.getElementsByClassName('number');
 var x = 0;
 var nextToClick=1;
 
+// Getting numbers from 1 to 20 at random positions
 var numberArray = [];
 while(numberArray.length<20) {
 var randomNumber = Math.ceil(Math.random()*20);
@@ -18,15 +19,14 @@ for(var i=0;i<numberArray.length;i++)
     arr[i].innerHTML = numberArray[i];
 }
 
+// Adding event listener
 function check(ar,a,b)
 {
 ar[a].addEventListener("click", function(){
-    console.log(b);
     if(b <= ar.length && nextToClick <= 20)
     {
         if(ar[a].innerHTML==nextToClick)
         {
-        console.log(nextToClick);
         ar[a].innerHTML=nextToClick+20;
         nextToClick++;
         }
@@ -34,7 +34,6 @@ ar[a].addEventListener("click", function(){
     else {
         if(ar[a].innerHTML==nextToClick)
         {
-        console.log(ar[a].innerHTML);
         ar[a].innerHTML=" ";
         if(nextToClick==40)
         {
@@ -47,22 +46,15 @@ ar[a].addEventListener("click", function(){
 });
 }
 
+// Loop to check for the order of click
 while(x<arr.length) 
 {
-    //arr[x].innerHTML = Math.ceil(Math.random()*20);
-    //arr.sort(function() { return (Math.ceil(Math.random())-0.5); });
     if(arr[x].innerHTML==count)
     {
       check(arr,x,count);
-    console.log(count);
     count++;
     x=0;
     }
     else
     x++;
 }
-
-
-
-
-

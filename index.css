@@ -9,13 +9,16 @@ td.number {
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
 }
+
 td.number:hover{
     background-color: #f5f5f5;
 }
+
 table{
     width: fit-content;
     table-layout: initial;
 }
+
 .timer {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
@@ -23,20 +26,24 @@ table{
     color: blue;
     width: 200px;
 }
+
 #b {
     text-align: center;
     color: green;
     font-size: 30px;
     font-weight: bolder;    
 }
+
 #change1 {
     font-size: 30px;
     color: crimson;
 }
+
 #change {
     font-size: 30px;
     color: crimson;
 }
+
 #restart {
     font-size: 30px;
     color: green;
@@ -44,4 +51,12 @@ table{
     position: absolute;
     left: 580px;
     top: 350px
+}
+
+h3 {
+color: honeydew;
+}
+
+h1 {
+    color: honeydew;
 }
