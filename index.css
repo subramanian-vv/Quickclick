@@ -48,9 +48,7 @@ table{
     font-size: 30px;
     color: green;
     font-weight: bolder;
-    position: absolute;
-    left: 580px;
-    top: 350px
+    margin-top: 15px;
 }
 
 h3 {
