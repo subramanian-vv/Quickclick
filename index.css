@@ -1,5 +1,5 @@
 td.number {
-    border: 2px solid #000;
+    border: 2px solid red;
     padding: 0.5rem;
     background-color: aqua;
     font-weight: bolder;
@@ -59,4 +59,17 @@ color: honeydew;
 
 h1 {
     color: honeydew;
+}
+
+.scores td {
+    color: honeydew;
+    border: 2px solid red;
+    font-weight: bolder;
+    width: 40px;
+    height: 40px;
+}
+
+.scores th {
+    color: seashell;
+    font-weight: bolder;
 }

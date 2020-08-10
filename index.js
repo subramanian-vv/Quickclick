@@ -1,3 +1,6 @@
+whole();
+
+function whole() {
 var count=1;
 var arr=document.getElementsByClassName('number');
 var x = 0;
@@ -17,6 +20,7 @@ else if(numberArray.indexOf(randomNumber) == -1) {
 for(var i=0;i<numberArray.length;i++)
 {
     arr[i].innerHTML = numberArray[i];
+    colorChange();
 }
 
 // Adding event listener
@@ -28,6 +32,7 @@ ar[a].addEventListener("click", function(){
         if(ar[a].innerHTML==nextToClick)
         {
         ar[a].innerHTML=nextToClick+20;
+        ar[a].style.background='#0000FF'
         nextToClick++;
         }
     }   
@@ -35,6 +40,7 @@ ar[a].addEventListener("click", function(){
         if(ar[a].innerHTML==nextToClick)
         {
         ar[a].innerHTML=" ";
+        ar[a].style.background='#FFFFFF'
         if(nextToClick==40)
         {
             stop();
@@ -51,10 +57,34 @@ while(x<arr.length)
 {
     if(arr[x].innerHTML==count)
     {
-      check(arr,x,count);
+    check(arr,x,count);
     count++;
     x=0;
     }
     else
     x++;
+}
+
+function colorChange() {
+    if(arr[i].innerHTML<=5)
+    {
+        arr[i].style.background='#B0E0E6'
+    }
+    else if(arr[i].innerHTML<=10)
+    {
+        arr[i].style.background='#87CEFA'
+    }
+    else if(arr[i].innerHTML<=15)
+    {
+        arr[i].style.background='#00BFFF'
+    }
+    else if(arr[i].innerHTML<=20)
+    {
+        arr[i].style.background='#1E90FF'
+    }
+    else
+    {
+        arr[i].style.background='#0000FF'
+    }
+}
 }

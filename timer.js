@@ -1,5 +1,7 @@
 var status = 0;
 var time = 0;
+var bestScores=[];
+var scores = document.querySelectorAll('.scores td');
 
 // Starting the timer
 function start() {
@@ -8,6 +10,7 @@ document.getElementById('b').disabled = true;
 document.getElementById('main').style.visibility = "visible";
 document.getElementById('b').style.visibility = "hidden";
 timer();
+//populationStorage();
 }
 
 // Stopping the timer
@@ -25,9 +28,9 @@ else if(comp == -1)
 {
     document.getElementById('change1').innerHTML = document.getElementById('change').innerHTML;
 }
-
 document.getElementById('restart').style.visibility = "visible";
 document.getElementById('main').style.visibility = "hidden";
+//populationStorage();
 }
 
 // Restarting the game
@@ -36,64 +39,9 @@ function restart () {
     time = 0;
     document.getElementById('restart').style.visibility = "hidden";
     document.getElementById('main').style.visibility = "visible";
-
+    //populationStorage();
 // Main working code
-var count=1;
-var arr=document.getElementsByClassName('number');
-var x = 0;
-var nextToClick=1;
-
-var numberArray = [];
-while(numberArray.length<20) {
-var randomNumber = Math.ceil(Math.random()*20);
-if(numberArray.length == 0) {
-    numberArray.push(randomNumber);
-}
-else if(numberArray.indexOf(randomNumber) == -1) {
-    numberArray.push(randomNumber);
-}
-}
-for(var i=0;i<numberArray.length;i++)
-{
-    arr[i].innerHTML = numberArray[i];
-}
-
-function check(ar,a,b)
-{
-ar[a].addEventListener("click", function(){
-    if(b <= ar.length && nextToClick <= 20)
-    {
-        if(ar[a].innerHTML==nextToClick)
-        {
-        ar[a].innerHTML=nextToClick+20;
-        nextToClick++;
-        }
-    }   
-    else {
-        if(ar[a].innerHTML==nextToClick)
-        {
-        ar[a].innerHTML=" ";
-        if(nextToClick==40)
-        {
-            stop();   
-        }
-        nextToClick++;
-        }
-    }
-});
-}
-
-while(x<arr.length) 
-{
-    if(arr[x].innerHTML==count)
-    {
-      check(arr,x,count);
-    count++;
-    x=0;
-    }
-    else
-    x++;
-}
+    whole();
     timer();
 }
 
@@ -125,4 +73,22 @@ function timer() {
         }, 10);
     }
 
+}
+
+function populationStorage() {
+//localStorage.setItem("highScore",document.getElementById('change1').innerHTML);
+//document.getElementById('change1').innerHTML = localStorage.getItem("highScore");
+if(bestScores.length<=4)
+{
+    bestScores.push(document.getElementById('change').innerHTML);
+    bestScores.sort();
+}
+localStorage.setItem("highScores", JSON.stringify(bestScores));
+var best = JSON.parse(localStorage.getItem("highScores"));
+
+var scoreCount=0;
+best.forEach(function() {
+    scores[scoreCount].innerHTML=best[scoreCount];
+    scoreCount++;
+});
 }
