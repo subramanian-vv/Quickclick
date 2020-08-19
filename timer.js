@@ -30,7 +30,7 @@ else if(comp == -1)
 }
 document.getElementById('restart').style.visibility = "visible";
 document.getElementById('main').style.visibility = "hidden";
-//populationStorage();
+// populationStorage();
 }
 
 // Restarting the game
